@@ -66,9 +66,9 @@ class PromptLearner(nn.Module):
     def forward(self, feat1=None):
         return F.dropout(self.linear(feat1), self.dropout)
 
-class CPMSBR(nn.Module):
+class CapeGCN(nn.Module):
     def __init__(self, opt, n_node, adjacency, ROOT_PATH):
-        super(CPMSBR, self).__init__()
+        super(CapeGCN, self).__init__()
         self.n_node = n_node
         self.dataset = opt.dataset
         self.emb_size = opt.emb_size
