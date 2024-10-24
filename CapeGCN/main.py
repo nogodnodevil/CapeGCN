@@ -60,7 +60,7 @@ if __name__ == '__main__':
     train_data = Data(train_data, shuffle=True, n_node=n_node)
     test_data = Data(test_data, shuffle=False, n_node=n_node)
 
-    model = trans_to_cuda(CPMSBR(opt, n_node, train_data.adjacency, ROOT_PATH=ROOT_PATH))
+    model = trans_to_cuda(CapeGCN(opt, n_node, train_data.adjacency, ROOT_PATH=ROOT_PATH))
 
     top_K = [1, 5, 10, 20]
     best_results = {}
